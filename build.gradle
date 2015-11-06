@@ -1,0 +1,27 @@
+buildscript {
+  repositories {
+    mavenCentral()
+    maven {
+      url 'http://oss.sonatype.org/content/repositories/snapshots'
+    }
+  }
+  dependencies {
+    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.0-beta-1103'
+  }
+}
+
+apply plugin: "kotlin" // or apply plugin: "kotlin2js" if targeting JavaScript
+apply plugin: 'application'
+
+mainClassName = "demo.MainKt"
+repositories {
+  mavenCentral()
+  maven {
+    url 'http://oss.sonatype.org/content/repositories/snapshots'
+  }
+}
+
+dependencies {
+  compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.0-beta-1103'
+  compile 'org.abstractj.kalium:kalium:0.4.0'
+}
